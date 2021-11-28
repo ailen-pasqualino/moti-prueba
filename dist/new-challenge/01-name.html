@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <title>Nuevo desafío: Nombre</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../home-empty.html" aria-label="Volver" class="text-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon icon-tabler icon-tabler-arrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <line x1="5" y1="12" x2="11" y2="18" />
+                    <line x1="5" y1="12" x2="11" y2="6" />
+                </svg> 
+            </a>
+            <p>Nuevo desafío</p>
+        </header> <!-- /header -->
+
+        <main>
+            <div class="row">
+                <div class="col">
+                    <p class="step-name">Paso 1</p>
+                    <h1>¿Cómo se llamará el desafío? <span aria-hidden="true">&#128064;</span></h1>
+                    <p class="required">El campo es obligatorio</p>
+                </div>
+            </div> <!-- /step-title row -->
+
+            <div class="tip-container d-flex">
+                <img src="../img/tip-icon.png" alt="" class="tip-icon" aria-hidden="true">
+                <p>Un buen nombre hace a un buen desafío y nos motiva a continuar. <span>¡Dejá volar tu creatividad!</span></p>
+            </div> <!-- /tip -->
+
+            <div class="row step-content">
+                <div class="col padding-none">
+                    <form method="GET" action="./02-days.html">
+                        <fieldset>
+                            <label for="challengeName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="challengeName" aria-describedby="nameHelp" required>
+                            <div id="nameHelp" class="form-text">Debe tener 30 caracteres como máximo.</div>
+                        </fieldset> <!-- /content -->
+
+                        <!-- Modal emojis -->
+                        <div class="d-flex align-items-center justify-content-between btn-modal-container">
+                            <label for="btn-emoji-modal" class="form-label margin-none">Añadí un emoji <span class="badge optional">Opcional</span></label>
+                            <button type="button" aria-label="Añadir emoji" id="btn-emoji-modal" class="btn btn-secondary btn-icon" data-bs-toggle="modal" data-bs-target="#emoji-modal">
+                                <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#5551FF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>
+                        </div>
+  
+                        <div class="step-button-container">
+                            <button type="submit" id="send" class="btn btn-primary step-button">Siguiente</button>
+                        </div>
+                    </form> <!-- /form -->
+                </div>
+            </div> <!-- /step-content row -->
+
+        </main><!-- /main -->
+
+    </div> <!-- /container -->
+
+<!-- Modal -->
+<div role="alertdialog" aria-modal="true" class="modal fade" id="emoji-modal" tabindex="-1" aria-labelledby="emoji-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emoji-modal-label">Seleccioná el emoji que represente tu desafío</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> <!-- /modal-header -->
+
+            <div class="modal-body">  
+                <form action="">
+                    <ul class="emoji-list">
+                        <div class="emoji-row d-flex">
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-1">&#129496;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-2">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-3">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-4" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-4">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-5" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-5">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-6" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-6">&#128205;</label>
+                            </li>
+                        </div> <!-- /emoji-row -->
+                        <div class="emoji-row d-flex">
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-7" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-7">&#129496;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-8" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-8">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-9" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-9">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-10" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-10">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-11" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-11">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-12" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-12">&#128205;</label>
+                            </li>
+                        </div> <!-- /emoji-row -->
+                        <div class="emoji-row d-flex">
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-13" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-13">&#129496;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-14" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-14">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-15" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-15">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-16" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-16">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-17" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-17">&#128205;</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="btn-check" name="options-outlined" id="emoji-18" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="emoji-18">&#128205;</label>
+                            </li>
+                        </div> <!-- /emoji-row -->
+                    </ul>
+                </form> <!-- /form -->
+            </div> <!-- /modal-body -->
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Agregar emoji</button>
+            </div> <!-- /modal-footer -->
+
+        </div> <!-- /modal-content -->
+    </div> <!-- /modal-dialog -->
+</div> <!-- /modal -->
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html> 
