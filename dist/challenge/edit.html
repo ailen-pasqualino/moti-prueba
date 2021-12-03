@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
 
-    <title>Editar desafío</title>
+    <title>Editar meta</title>
 </head>
 
 <body id="challenge" class="body-scroll">
@@ -23,7 +23,7 @@
                     <line x1="5" y1="12" x2="11" y2="6" />
                 </svg> 
             </a>
-            <p>Editar desafío</p>
+            <p>Editar meta</p>
         </header> <!-- /header -->
 
         <main>
@@ -35,19 +35,20 @@
 
                     <form method="GET" action="./info-modified.html">
                         <fieldset>
+                            <legend class="sr-only">Los campos son obligatorio</legend>
                             <label id="challenge-name" class="form-label d-none">Nombre</label>
                             <input type="text" aria-labelledby="challenge-name" class="form-control challenge-name" value="Yoga Semanal"  aria-describedby="nameHelp" required>
                             <div id="nameHelp" class="form-text">Debe tener 30 caracteres como máximo.</div>
                         </fieldset> <!-- /name -->
 
                         <fieldset id="challenge-days">
-                            <legend class="margin-none">Repetir el desafío</legend>
+                            <legend class="sr-only">Repetir la meta</legend>
                             <div class="form-switch align-items-center justify-content-between d-flex">
                                 <label class="form-check-label" for="repeat-everyday">Repetir todos los días</label>
                                 <input class="form-check-input" type="checkbox" role="switch" id="repeat-everyday">
                             </div>
 
-                            <ul class="tag-row d-flex justify-content-between">
+                            <ul role="presentation" class="tag-row d-flex justify-content-between">
                                 <li>
                                     <input type="checkbox" class="btn-check day" id="domingo" autocomplete="off" aria-label="Domingo">
                                     <label aria-hidden="true" class="btn btn-outline-primary tag" for="domingo">D</label>
@@ -80,22 +81,27 @@
                         </fieldset> <!-- /days -->
 
                         <fieldset>
+                            <legend class="sr-only">Final de la meta</legend>
                             <label for="challenge-end" class="form-label">Fecha de finalización</label>
                             <input type="date" value="2021-12-27" class="form-control" id="challenge-end" aria-describedby="nameHelp" required>
                         </fieldset> <!-- /end -->
 
                         <div class="tip-container d-flex">
                             <img src="../img/tip-icon.png" class="tip-icon" alt="">
-                            <p class="text-start">Sincronizá el desafío con tu calendario para un mejor seguimiento.</p>
+                            <p class="text-start">Sincronizá la meta con tu calendario para un mejor seguimiento.</p>
                         </div> <!-- /tip -->
 
                         <fieldset id="reminder-time">
+                            <legend class="sr-only">Recordatorio</legend>
                             <div class="form-switch align-items-center justify-content-between d-flex">
-                                <label class="form-check-label" for="add-calendar">Recibir recordatorios</label>
-                                <input class="form-check-input" type="checkbox" role="switch" id="add-calendar" checked>
+                                <label class="form-check-label" for="add-reminder">Recibir recordatorios</label>
+                                <input class="form-check-input" type="checkbox" role="switch" id="add-reminder" checked>
                             </div>
-                            <label for="challenge-time" class="form-label">Elegir horario</label>
-                            <input type="time" value="18:30" class="form-control" id="challenge-time" required>
+
+                            <div class="add-reminder-time d-block">
+                                <label for="challenge-time" class="form-label">Elegir horario</label>
+                                <input type="time" value="18:30" class="form-control" id="challenge-time">
+                            </div>
                         </fieldset>
 
                         <div class="step-button-container">
@@ -114,13 +120,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="emoji-modal-label">Seleccioná el emoji que represente tu desafío</h5>
+                    <h5 class="modal-title" id="emoji-modal-label">Seleccioná el emoji que represente tu meta</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div> <!-- /modal-header -->
 
                 <div class="modal-body">  
                     <form action="">
-                        <ul class="emoji-list">
+                        <ul role="presentation" class="emoji-list">
                             <div class="emoji-row d-flex">
                                 <li>
                                     <input type="radio" class="btn-check" name="options-outlined" id="emoji-1" autocomplete="off">
