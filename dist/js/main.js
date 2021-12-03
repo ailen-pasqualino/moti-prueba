@@ -7,10 +7,10 @@ var calendarMonth = $("#month");
 //Selección botón mes
 calendarMonth.click(function(){
     $(this).addClass("active");
-    $(this).attr("aria-pressed","true");
+    $(this).attr("aria-expanded","true");
 
     calendarWeek.removeClass("active");
-    calendarWeek.removeAttr("aria-pressed");
+    calendarWeek.attr("aria-expanded","false");
 
     $("#calendar-month").removeClass("d-none");
     $("#calendar-month").addClass("d-block");
@@ -26,10 +26,10 @@ calendarMonth.click(function(){
 //Selección botón mes
 calendarWeek.click(function(){
     $(this).addClass("active");
-    $(this).attr("aria-pressed","true");
+    $(this).attr("aria-expanded","true");
 
     calendarMonth.removeClass("active");
-    calendarMonth.removeAttr("aria-pressed");
+    calendarMonth.attr("aria-expanded","false");
 
     $("#calendar-month").attr("aria-hidden","true");
     $("#calendar-month").addClass("d-none");
@@ -37,7 +37,7 @@ calendarWeek.click(function(){
     $("#calendar-week").removeClass("d-none");
     $("#calendar-week").removeAttr("aria-hidden");
     
-    $(".current-list, #emotions-log").removeClass("d-none");
+    $(".current-list, #emotions-log").not("#emotions-log-empty").removeClass("d-none");
     $(".current-list, #emotions-log").addClass("d-block");
 });
 
@@ -46,24 +46,30 @@ calendarWeek.click(function(){
 $(".calendar-week-day").click(function(){
     var daySpan = $(this).children();
 
-    if( daySpan.length == 2 ){
+    if( daySpan.hasClass("challenge-number") ){
 
         $(".other-list").removeClass("d-none");
         $(".other-list").addClass("d-block");
+
         $(".current-list").addClass("d-none");
+
+        $(".other-list h2,.current-stats-list h2").focus();
 
     } else {
 
         $(".current-list").removeClass("d-none");
         $(".current-list").addClass("d-block");
+
         $(".other-list").removeClass("d-block");
         $(".other-list").addClass("d-none");
 
+        $(".current-list h2,.current-stats-list h2").focus();
     }
 });
 
 
-//PASO REMEINDER
+
+//PASO REMINDER
 $("#yes").click(function(){
     $("#reminder-time").removeClass("d-none");
     $("#reminder-time").addClass("d-block");
@@ -73,6 +79,33 @@ $("#yes").click(function(){
 $("#no").click(function(){
     $("#reminder-time").removeClass("d-block");
     $("#reminder-time").addClass("d-none");
+});
+
+
+//EDICIÓN DE META - REMINDER
+$("#add-reminder").change(function(){
+    if($(this).prop('checked') == false){
+        $(".add-reminder-time").removeClass("d-block");
+        $(".add-reminder-time").addClass("d-none");
+    } else {
+        $(".add-reminder-time").removeClass("d-none");
+        $(".add-reminder-time").addClass("d-block");
+        $("#challenge-time").focus();
+    }
+});
+
+
+//PASO CHECKPOINT
+$("#checkpoint .btn-check").change(function(){
+    $(this).each(function(){
+        if($("#other").prop('checked')){
+            $("#chekpoint-time").removeClass("d-none");
+            $("#chekpoint-time").addClass("d-block");
+        } else {
+            $("#chekpoint-time").removeClass("d-block");
+            $("#chekpoint-time").addClass("d-none");
+        }
+    })
 });
 
 
