@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
-label, legend {
+label {
   font: 600 1rem "Inter", sans-serif;
 }
 
@@ -11,11 +10,7 @@ fieldset {
 .required {
   font: 400 0.9rem "Inter", sans-serif;
   color: var(--bs-gray-700);
-  margin-top: 1.5rem;
-}
-
-#challenge-days .form-check-label {
-  font: 400 1rem "Inter", sans-serif;
+  margin-bottom: 2rem;
 }
 
 input[type=radio] {
@@ -26,7 +21,7 @@ input[type=radio] {
 
 .form-switch {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 0 0 1.5rem 0;
 }
 
 .form-switch .form-check-input {
@@ -115,12 +110,47 @@ input[type=radio] {
   margin-bottom: 1rem;
 }
 
-#reminder-time h2 {
+#reminder-time legend {
+  font: 600 1rem "Inter", sans-serif;
   margin-bottom: 0.75rem;
 }
 
-#reminder-time p {
-  margin-bottom: 2rem;
+#checkpoint {
+  margin-bottom: 1rem;
+}
+
+#checkpoint .row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+#checkpoint .tag {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 0;
+}
+
+#checkpoint .tag img {
+  height: 4rem;
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+
+#checkpoint .tag p:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+#checkpoint .tag p:last-child {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#checkpoint .tag .chekpoint-time {
+  font: 400 0.9rem "Inter", sans-serif;
+  color: var(--bs-gray-700);
+}
+
+.add-calendar {
+  margin-top: 1.5rem;
 }
 
 btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
@@ -303,15 +333,30 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
   border-radius: 0.5rem;
 }
 
+section.optional li {
+  padding: 0.5rem 0;
+}
+
+section.optional li p {
+  font-weight: 500;
+}
+
+.optional-img {
+  width: 4rem;
+  margin-right: 1rem;
+}
+
 #home-page .tip-container {
   margin-bottom: 1.5rem;
 }
 
-#home-menu {
+#home-profile {
+  padding: 0;
   background-color: transparent;
+  width: 3.5rem;
 }
 
-#home-menu img {
+#home-profile img {
   width: 100%;
   border: 2px solid var(--bs-gray-900);
   border-radius: 100%;
@@ -412,7 +457,7 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
   border-bottom: 2px solid #5551FF;
 }
 
-#calendar ul {
+.calendar-nav ul {
   margin: 0;
   width: 100%;
   height: -webkit-max-content;
@@ -420,43 +465,45 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
   height: max-content;
 }
 
-#calendar ul li {
+.calendar-nav ul li {
   text-align: center;
   padding: 0;
   display: inline-block;
 }
 
-#calendar ul a {
+.calendar-nav ul button {
+  width: 100%;
   display: block;
+  border: none;
   border-radius: 4rem;
-  text-decoration: none;
+  background-color: transparent;
   font: 400 1rem "Inter", sans-serif;
   color: var(--bs-gray-900);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-#calendar ul a .day-name {
+.calendar-nav ul button .day-name {
   font: 400 0.9rem "Inter", sans-serif;
   color: var(--bs-gray-700);
   margin-bottom: 1rem;
   display: block;
 }
 
-#calendar ul a:focus, #calendar ul a:hover {
+.calendar-nav ul button:focus, .calendar-nav ul button:hover {
   background-color: var(--bs-gray-100);
   color: #5551FF;
 }
 
-#calendar ul a:focus .day-name, #calendar ul a:hover .day-name {
+.calendar-nav ul button:focus .day-name, .calendar-nav ul button:hover .day-name {
   color: #5551FF;
 }
 
-#calendar ul a.active {
+.calendar-nav ul button.active {
   background-color: #EEEEFF;
 }
 
-#calendar ul a .challenge-number {
+.calendar-nav ul button .challenge-number {
   display: block;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -522,7 +569,7 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
           filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.075));
 }
 
-#emotions-log {
+#emotions-log, #emotions-log-empty {
   margin: 2rem 0;
 }
 
@@ -570,6 +617,10 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
   margin: 1.5rem 0;
 }
 
+.emotion-options legend {
+  margin-bottom: 1rem;
+}
+
 .emotion-options li {
   padding: 0;
 }
@@ -582,7 +633,7 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
 
 .emotion-options li label img {
   display: block;
-  width: 70%;
+  width: 60%;
   margin: 0 auto 0.75rem auto;
 }
 
@@ -701,6 +752,10 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
 #challenge form .challenge-name {
   text-align: center;
   font: 500 1.75rem "Inter", sans-serif;
+}
+
+#challenge .tip-container {
+  margin-bottom: 1.5rem;
 }
 
 .offcanvas-bottom {
@@ -846,99 +901,165 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
   margin: 2rem 0;
 }
 
-body.onboarding header {
-  padding: 2rem body.onboarding header size-medium;
+body.onboarding, body.quote {
+  background-color: var(--bs-gray-900);
+  color: white;
 }
 
-body.onboarding header a {
+body.onboarding header, body.quote header {
+  padding: 2rem body.onboarding header, body.quote header size-medium;
+}
+
+body.onboarding header a, body.quote header a {
   margin-right: 5rem;
 }
 
-body.onboarding header .logo {
+body.onboarding header .logo, body.quote header .logo {
   height: 3rem;
 }
 
-body.onboarding header img {
+body.onboarding header img, body.quote header img {
   height: 2rem;
   margin-right: 1rem;
 }
 
-body.onboarding header p {
+body.onboarding header p, body.quote header p {
   font: 500 1.15rem "Inter", sans-serif;
   color: white;
 }
 
-body.onboarding h1 {
-  font: italic 400 1.5rem "Inter", sans-serif;
+body.onboarding h1, body.quote h1 {
   margin-bottom: 1.5rem !important;
   text-align: center;
 }
 
-body.onboarding p {
-  font-size: 2.8rem;
+body.onboarding.display, body.quote.display {
+  font: !important;
+}
+
+body.onboarding p, body.quote p {
   text-align: center;
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
 }
 
-body.onboarding p p .highlight {
-  font-size: 2.8rem !important;
+body.onboarding .img-container, body.quote .img-container {
+  padding: 2rem 2rem 0 2rem;
 }
 
-body.onboarding .step-button-container {
-  background-color: transparent;
-  text-align: end;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding: 0 3rem 2rem 3rem;
+body.onboarding .img-container .moti-onboarding, body.quote .img-container .moti-onboarding {
+  height: 90%;
+  width: auto;
 }
 
-body.onboarding .step-button-container a {
+body.onboarding .step-button-container, body.quote .step-button-container {
+  background-color: var(--bs-gray-900);
+  padding-top: 0;
+}
+
+.step-button-container a {
+  text-align: center;
   color: white;
   font: 400 1rem "Inter", sans-serif;
   text-decoration: none;
-}
-
-body.onboarding .final-step {
-  background-color: transparent;
-  padding: 1rem;
-}
-
-body.onboarding .final-step a {
-  text-align: center;
-  display: block;
-  width: 100%;
-  background-color: #5551FF;
   border-radius: 0.25rem;
-  color: white;
-  padding: 0.75rem 1rem;
-  -webkit-filter: drop-shadow(0px 16px 48px rgba(85, 81, 255, 0.25));
-          filter: drop-shadow(0px 16px 48px rgba(85, 81, 255, 0.25));
 }
 
-body.onboarding .onboarding-background-1 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: -1030;
-  width: 60%;
+body.onboarding h1 {
+  font: italic 400 1.5rem "Inter", sans-serif;
+}
+
+body.quote h1 {
+  font: !important;
+  padding-bottom: 1rem;
+  background: #212529e0;
+}
+
+body.quote p {
+  padding-bottom: 2rem;
+  background: #212529e0;
+}
+
+body.quote p span {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+body.quote .img-container {
+  padding: 0;
+  width: 100%;
   height: auto;
-}
-
-body.onboarding .onboarding-background-2 {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: -1030;
-  height: 40%;
-  width: auto;
+  z-index: -2;
 }
 
-body.onboarding .onboarding-background-3 {
-  position: fixed;
-  bottom: 0;
-  left: 1.5rem;
-  z-index: -1030;
-  height: 45%;
-  width: auto;
+body.quote .img-container img {
+  height: 90%;
+}
+
+body#profile #user-avatar {
+  display: block;
+  width: 10rem;
+  border-radius: 100%;
+  margin: 0 auto 1.5rem auto;
+}
+
+body#profile h1 {
+  text-align: center;
+}
+
+body#profile #options {
+  margin-top: 2rem;
+}
+
+body#profile #options li {
+  padding: 0;
+}
+
+body#profile #options li button {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  padding: 1.5rem 0;
+}
+
+body#profile #options li button svg {
+  margin-right: 1rem;
+}
+
+body#profile #options li:last-child {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--bs-gray-300);
+}
+
+body#profile #options li:last-child button {
+  margin-top: 0.5rem;
+  color: var(--bs-red);
+}
+
+body#profile #options li:last-child svg {
+  stroke: var(--bs-red);
+}
+
+body#profile #accesibility-declaration {
+  padding-bottom: 1.5rem;
+}
+
+body#profile #accesibility-declaration h3, body#profile #accesibility-declaration p {
+  margin-bottom: 0.5rem;
+}
+
+body#profile #accesibility-declaration ul {
+  margin: 1rem 0;
+}
+
+body#profile #about {
+  padding-bottom: 1.5rem;
 }
 
 .margin-none {
@@ -954,7 +1075,7 @@ body.onboarding .onboarding-background-3 {
 }
 
 .body-scroll {
-  margin-bottom: 3rem;
+  margin-bottom: 50%;
 }
 
 .container {
@@ -964,6 +1085,17 @@ body.onboarding .onboarding-background-3 {
 
 .modal-header {
   border: none;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 
 h1, h2, h3, p, small {
@@ -991,11 +1123,11 @@ small {
 }
 
 .display {
-  font: 600 3.5rem "Inter", sans-serif;
+  font: 600 2rem "Inter", sans-serif;
 }
 
 .display .highlight {
-  font: italic 400 3.5rem "Inter", sans-serif;
+  font: italic 400 2rem "Inter", sans-serif;
 }
 
 a:hover {
@@ -1067,20 +1199,33 @@ header p {
   margin: 1.5rem auto 0 auto;
 }
 
-body.quote {
-  background-color: var(--bs-gray-900);
-  color: white;
+/* //Quote pages
+body.quote{
+    background-color: $dark-text;
+    color: white;
+
+    & h1{
+        margin-bottom: $size-large + $size-regular;
+    }
+
+    & h2{
+        font-weight: weight(regular);
+        
+        & span{
+            font-weight: weight(semibold);
+        }
+    }
+
+} */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none !important;
+  -webkit-appearance: none !important;
 }
 
-body.quote h1 {
-  margin-bottom: 3rem;
-}
-
-body.quote h2 {
-  font-weight: 400;
-}
-
-body.quote h2 span {
-  font-weight: 600;
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none !important;
+  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */
