@@ -36,278 +36,280 @@
                 <div class="calendar-controls d-flex justify-content-between align-items-center">
                     <p>Noviembre 2021</p>
                     <div class="calendar-switch">
-                        <button type="button" id="week" class="active" aria-pressed="true" aria-label="Semana">semana</button>
-                        <button type="button" id="month" aria-pressed="false" aria-label="Mes">mes</button>
+                        <button type="button" id="week" class="active" aria-expanded="true" aria-label="Semana">semana</button>
+                        <button type="button" id="month" aria-expanded="false" aria-label="Mes">mes</button>
                     </div>
                 </div>
-                <nav id="calendar-week" aria-label="Semana del 21">
-                    <ul class="days">
-                        <div class="row d-flex">
-                            <li class="col">
-                                <a href="" aria-current="page" class="active" aria-label="Domingo 28">
-                                    <span aria-hidden="true" class="day-name">D</span>
-                                    28
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a href="" aria-label="Lunes 29">
-                                    <span class="day-name" aria-hidden="true">L</span>
-                                    29
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a href="" aria-label="Martes 30">
-                                    <span class="day-name" aria-hidden="true">M</span>
-                                    30
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a href="" aria-label="Miércoles 1">
-                                    <span class="day-name" aria-hidden="true">M</span>
-                                    1
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a href="" aria-label="Jueves 2">
-                                    <span class="day-name" aria-hidden="true">J</span>
-                                    2
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a href="" aria-label="Viernes 3">
-                                    <span class="day-name" aria-hidden="true">V</span>
-                                    3
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a href="" aria-label="Sábado 4">
-                                    <span class="day-name" aria-hidden="true">S</span>
-                                    4
-                                </a>
-                            </li>
-                        </div> <!-- /row -->
-                    </ul> <!-- /calendar-week -->
-                </nav>
-
-                <nav id="calendar-month" aria-label="Mes de Noviembre" class="d-none">
-                    <ul class="days">
-                        <div class="row d-flex">
-                            <li class="col">
-                                <a aria-label="Domingo 31" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge">
-                                    <span aria-hidden="true" class="day-name">D</span>
-                                    31
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Lunes 1">
-                                    <span class="day-name" aria-hidden="true">L</span>
-                                    1
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Martes 2">
-                                    <span class="day-name" aria-hidden="true">M</span>
-                                    2
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Miércoles 3">
-                                    <span class="day-name" aria-hidden="true">M</span>
-                                    3
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Jueves 4">
-                                    <span class="day-name" aria-hidden="true">J</span>
-                                    4
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Viernes 5">
-                                    <span class="day-name" aria-hidden="true">V</span>
-                                    5
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Sábado 6">
-                                    <span class="day-name" aria-hidden="true">S</span>
-                                    6
-                                </a>
-                            </li>
-                        </div> <!-- /row -->
-                        <div class="row d-flex">
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Domingo 7">
-                                    7
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Lunes 8">
-                                    8
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Martes 9" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    9
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Miércoles 10">
-                                    10
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Jueves 11" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    11
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Viernes 12">
-                                    12
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Sábado 13">
-                                    13
-                                </a>
-                            </li>
-                        </div> <!-- /row -->
-                        <div class="row d-flex">
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Domingo 14">
-                                    14
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Lunes 15">
-                                    15
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Martes 16" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    16
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Miércoles 17">
-                                    17
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Jueves 18" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    18
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Viernes 19">
-                                    19
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Sábado 20">
-                                    20
-                                </a>
-                            </li>
-                        </div> <!-- /row -->
-                        <div class="row d-flex">
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Domingo 21">
-                                    21
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Lunes 22">
-                                    22
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Martes 23" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    23
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Miércoles 24">
-                                    24
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Jueves 25" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    25
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Viernes 26">
-                                    26
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Sábado 27">
-                                    27
-                                </a>
-                            </li>
-                        </div> <!-- /row -->
-                        <div class="row d-flex">
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-current="page" class="active" aria-label="Domingo 28">
-                                    28
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button"
-                                aria-controls="modal-no-challenge" aria-label="Lunes 29">
-                                    29
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Martes 30" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    30
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Miércoles 1">
-                                    1
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a aria-label="Jueves 2" data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-challenge">
-                                    2
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Viernes 3">
-                                    3
-                                </a>
-                            </li>
-                            <li class="col">
-                                <a data-bs-toggle="offcanvas" href="#modal-no-challenge" role="button" aria-controls="modal-no-challenge" aria-label="Sábado 4">
-                                    4
-                                </a>
-                            </li>
-                        </div> <!-- /row -->
-                    </ul> <!-- /calendar-month -->
-                </nav>
             </section> <!-- calendar -->
 
-            <section id="challenges-stats" class="stats-section" aria-labelledby="challenges-heading">
-                <h2 id="challenges-heading">Tus desafíos</h2>
-                <div class="no-data justify-content-center">
-                    <img src="../img/no-data-2.png" alt="">
-                    <p>Todavía no tenés desafíos registrados</p>
-                </div>        
-            </section><!-- /challenges -->
+            <nav id="calendar-week" class="calendar-nav" aria-label="Semana del 28">
+                <ul class="days" role="presentation">
+                    <div class="row d-flex">
+                        <li class="col">
+                            <button type="button" aria-current="page" class="active calendar-week-day" aria-label="Hoy: Domingo 28">
+                                <span aria-hidden="true" class="day-name">D</span>
+                                28
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button type="button" class="calendar-week-day" aria-label="Lunes 29">
+                                <span class="day-name" aria-hidden="true">L</span>
+                                29
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button type="button" class="calendar-week-day" aria-label="Martes 30">
+                                <span class="day-name" aria-hidden="true">M</span>
+                                30
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button type="button" class="calendar-week-day" aria-label="Miércoles 1">
+                                <span class="day-name" aria-hidden="true">M</span>
+                                1
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button type="button" class="calendar-week-day" aria-label="Jueves 2">
+                                <span class="day-name" aria-hidden="true">J</span>
+                                2
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button type="button" class="calendar-week-day" aria-label="Viernes 3">
+                                <span class="day-name" aria-hidden="true">V</span>
+                                3
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button type="button" class="calendar-week-day" aria-label="Sábado 4">
+                                <span class="day-name" aria-hidden="true">S</span>
+                                4
+                            </button>
+                        </li>
+                    </div> <!-- /row -->
+                </ul> <!-- /calendar-week -->
+            </nav>
 
-            <div class="tip-container motivation d-flex">
-                <img src="../img/motivation-icon.png" alt="">
-                <p class="align-self-center">Me gusta el minimalismo pero.. ¿Y si agregamos desafíos?</p>
-            </div> <!-- /motivation-tip -->
+            <nav id="calendar-month" class="calendar-nav d-none" aria-label="Mes de Noviembre">
+                <ul class="days" role="presentation">
+                    <div class="row d-flex">
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Domingo 31" >
+                                <span aria-hidden="true" class="day-name">D</span>
+                                31
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Lunes 1">
+                                <span class="day-name" aria-hidden="true">L</span>
+                                1
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Martes 2">
+                                <span class="day-name" aria-hidden="true">M</span>
+                                2
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Miércoles 3">
+                                <span class="day-name" aria-hidden="true">M</span>
+                                3
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Jueves 4">
+                                <span class="day-name" aria-hidden="true">J</span>
+                                4
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Viernes 5">
+                                <span class="day-name" aria-hidden="true">V</span>
+                                5
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Sábado 6">
+                                <span class="day-name" aria-hidden="true">S</span>
+                                6
+                            </button>
+                        </li>
+                    </div> <!-- /row -->
+                    <div class="row d-flex">
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Domingo 7">
+                                7
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Lunes 8">
+                                8
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Martes 9">
+                                9
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Miércoles 10">
+                                10
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Jueves 11">
+                                11
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Viernes 12">
+                                12
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Sábado 13">
+                                13
+                            </button>
+                        </li>
+                    </div> <!-- /row -->
+                    <div class="row d-flex">
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Domingo 14">
+                                14
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Lunes 15">
+                                15
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Martes 16">
+                                16
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Miércoles 17">
+                                17
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Jueves 18">
+                                18
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Viernes 19">
+                                19
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Sábado 20">
+                                20
+                            </button>
+                        </li>
+                    </div> <!-- /row -->
+                    <div class="row d-flex">
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Domingo 21">
+                                21
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Lunes 22">
+                                22
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Martes 23">
+                                23
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Miércoles 24">
+                                24
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Jueves 25">
+                                25
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Viernes 26">
+                                26
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Sábado 27">
+                                27
+                            </button>
+                        </li>
+                    </div> <!-- /row -->
+                    <div class="row d-flex">
+                        <li class="col">
+                            <button class="calendar-week-day" aria-current="page" class="active" aria-label="Hoy: Domingo 28">
+                                28
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Lunes 29">
+                                29
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Martes 30">
+                                30
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Miércoles 1">
+                                1
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Jueves 2">
+                                2
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Viernes 3">
+                                3
+                            </button>
+                        </li>
+                        <li class="col">
+                            <button class="calendar-week-day" aria-label="Sábado 4">
+                                4
+                            </button>
+                        </li>
+                    </div> <!-- /row -->
+                </ul> <!-- /calendar-month -->
+            </nav> <!-- /nav calendario -->
 
-            <section id="emotions" class="stats-section" aria-labelledby="emotions-heading">
-                <h2 id="emotions-heading">Tu emoción del día</h2>
-                <div class="no-data justify-content-center">
-                    <img src="../img/no-data-3.png" alt="">
-                    <p>Todavía no tenés emociones registradas</p>
-                </div>              
-            </section><!-- /emotions -->
+            <div class="current-list">
+                <section id="challenges-stats" class="stats-section " aria-labelledby="challenges-heading">
+                    <h2 id="challenges-heading" tabindex="0">Tus metas</h2>
+                    <div class="no-data justify-content-center">
+                        <img src="../img/no-data-2.png" alt="">
+                        <p>Todavía no tenés metas registradas</p>
+                    </div>        
+                </section><!-- /challenges -->
+    
+                <div class="tip-container motivation d-flex">
+                    <img src="../img/motivation-icon.png" alt="">
+                    <p class="align-self-center">Me gusta el minimalismo pero.. ¿Y si agregamos más metas?</p>
+                </div> <!-- /motivation-tip -->
+    
+                <section id="emotions" class="stats-section" aria-labelledby="emotions-heading">
+                    <h2 id="emotions-heading">Tu emoción del día</h2>
+                    <div class="no-data justify-content-center">
+                        <img src="../img/no-data-3.png" alt="">
+                        <p>Todavía no tenés emociones registradas</p>
+                    </div>              
+                </section><!-- /emotions -->
+            </div>
 
         </main> <!-- /main -->
     </div> <!-- /container -->
