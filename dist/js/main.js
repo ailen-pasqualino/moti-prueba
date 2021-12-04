@@ -44,27 +44,29 @@ calendarWeek.click(function(){
 
 //Selección días en calendario semanal
 $(".calendar-week-day").click(function(){
-    var daySpan = $(this).children();
+    $(this).each(function(){
+        var daySpan = $(this).children();
 
-    if( daySpan.hasClass("challenge-number") ){
+        if( daySpan.hasClass("challenge-number") ){
 
-        $(".other-list").removeClass("d-none");
-        $(".other-list").addClass("d-block");
+            $(".other-list").removeClass("d-none");
+            $(".other-list").addClass("d-block");
 
-        $(".current-list").addClass("d-none");
+            $(".current-list").addClass("d-none");
 
-        $(".other-list h2,.current-stats-list h2").focus();
+            $(".other-list h2,.current-stats-list h2").focus();
 
-    } else {
+        } else {
 
-        $(".current-list").removeClass("d-none");
-        $(".current-list").addClass("d-block");
+            $(".current-list").removeClass("d-none");
+            $(".current-list").addClass("d-block");
 
-        $(".other-list").removeClass("d-block");
-        $(".other-list").addClass("d-none");
+            $(".other-list").removeClass("d-block");
+            $(".other-list").addClass("d-none");
 
-        $(".current-list h2,.current-stats-list h2").focus();
-    }
+            $(".current-list h2,.current-stats-list h2").focus();
+        }
+    });
 });
 
 
