@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <header>
-            <a href="../onboarding/02.html" aria-label="Volver" class="text-dark">
+            <a href="../onboarding/02.html" tabindex="1" aria-label="Volver" class="text-dark">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon icon-tabler icon-tabler-arrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -38,11 +38,11 @@
                         <fieldset>
                             <legend class="required">El campo es obligatorio</legend>
                             <label for="userName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="userName" required>
+                            <input type="text" tabindex="2" class="form-control" id="userName" required>
                         </fieldset> <!-- /content -->
 
                         <div class="step-button-container">
-                            <button type="submit" id="send" class="btn btn-primary step-button">Siguiente</button>
+                            <button type="submit" tabindex="3" id="send" class="btn btn-primary step-button">Siguiente</button>
                         </div>
                     </form> <!-- /form -->
                 </div>
