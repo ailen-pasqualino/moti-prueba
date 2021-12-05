@@ -500,7 +500,7 @@ section.optional li p {
 }
 
 .calendar-nav ul button.active {
-  background-color: #EEEEFF;
+  background-color: #EEEEFF !important;
 }
 
 .calendar-nav ul button .challenge-number {
@@ -514,6 +514,10 @@ section.optional li p {
   border-radius: 100%;
   padding: 0.25rem 0.5rem;
   margin: 0.5rem auto 0 auto;
+}
+
+#calendar-month .row {
+  margin-bottom: 1rem;
 }
 
 #challenges {
@@ -536,6 +540,10 @@ section.optional li p {
 #challenges .card-listado li {
   padding: 0;
   margin-bottom: 1rem;
+}
+
+#challenges .no-data {
+  padding-top: 2rem;
 }
 
 .challenge {
@@ -1062,6 +1070,10 @@ body#profile #about {
   padding-bottom: 1.5rem;
 }
 
+body {
+  margin-bottom: 60% !important;
+}
+
 .margin-none {
   margin: 0;
 }
@@ -1072,10 +1084,6 @@ body#profile #about {
 
 .full-width {
   width: 100%;
-}
-
-.body-scroll {
-  margin-bottom: 50%;
 }
 
 .container {
