@@ -35,14 +35,14 @@
 
                     <form method="GET" action="./info-modified.html">
                         <fieldset>
-                            <legend class="sr-only">Los campos son obligatorio</legend>
+                            <legend class="sr-only">Nombre de meta</legend>
                             <label id="challenge-name" class="form-label d-none">Nombre</label>
                             <input type="text" aria-labelledby="challenge-name" class="form-control challenge-name" value="Yoga Semanal"  aria-describedby="nameHelp" required>
                             <div id="nameHelp" class="form-text">Debe tener 30 caracteres como máximo.</div>
                         </fieldset> <!-- /name -->
 
                         <fieldset id="challenge-days">
-                            <legend class="sr-only">Repetir la meta</legend>
+                            <legend class="sr-only">Frecuencia</legend>
                             <div class="form-switch align-items-center justify-content-between d-flex">
                                 <label class="form-check-label" for="repeat-everyday">Repetir todos los días</label>
                                 <input class="form-check-input" type="checkbox" role="switch" id="repeat-everyday">
@@ -81,26 +81,34 @@
                         </fieldset> <!-- /days -->
 
                         <fieldset>
-                            <legend class="sr-only">Final de la meta</legend>
-                            <label for="challenge-end" class="form-label">Fecha de finalización</label>
-                            <input type="date" value="2021-12-27" class="form-control" id="challenge-end" aria-describedby="nameHelp" required>
+                            <legend class="sr-only">Fecha de finalización</legend>
+                            <label for="challenge-end" class="form-label">Mi meta terminará el</label>
+                            <input type="date" value="2021-12-27" class="form-control" id="challenge-end" required>
                         </fieldset> <!-- /end -->
-
-                        <div class="tip-container d-flex">
-                            <img src="../img/tip-icon.png" class="tip-icon" alt="">
-                            <p class="text-start">Sincronizá la meta con tu calendario para un mejor seguimiento.</p>
-                        </div> <!-- /tip -->
 
                         <fieldset id="reminder-time">
                             <legend class="sr-only">Recordatorio</legend>
                             <div class="form-switch align-items-center justify-content-between d-flex">
-                                <label class="form-check-label" for="add-reminder">Recibir recordatorios</label>
+                                <label class="form-check-label" for="add-reminder">Recibir recordatorio</label>
                                 <input class="form-check-input" type="checkbox" role="switch" id="add-reminder" checked>
                             </div>
 
                             <div class="add-reminder-time d-block">
                                 <label for="challenge-time" class="form-label">Elegir horario</label>
                                 <input type="time" value="18:30" class="form-control" id="challenge-time">
+                            </div>
+                        </fieldset>
+
+                        <div class="tip-container d-flex">
+                            <img src="../img/tip-icon.png" class="tip-icon" alt="">
+                            <p class="text-start">Sincronizá la meta con tu calendario para un mejor seguimiento.</p>
+                        </div> <!-- /tip -->
+
+                        <fieldset id="calendar">
+                            <legend class="sr-only">Calendario</legend>
+                            <div class="form-switch align-items-center justify-content-between d-flex">
+                                <label class="form-check-label" for="add-calendar">Agregar meta a mi calendario</label>
+                                <input class="form-check-input" type="checkbox" role="switch" id="add-calendar" checked>
                             </div>
                         </fieldset>
 
