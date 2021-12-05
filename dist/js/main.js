@@ -1,8 +1,16 @@
+//SCROLL A TODOS LOS INPUTS CON FOCO
+$('input,button,a').on('focus',function(){
+    var inputHeight=$(this).offset().top;
+    var inputPosition = inputHeight - 50;
+    $("html, body").animate({ scrollTop: inputPosition}, 300);
+    return false;
+ });
+
+
 //CALENDARIO
 //Links de semana y mes
 var calendarWeek = $("#week");
 var calendarMonth = $("#month");
-
 
 //Selección botón mes
 calendarMonth.click(function(){
@@ -49,20 +57,20 @@ $(".calendar-week-day").click(function(){
 
         if( daySpan.hasClass("challenge-number") ){
 
+            $(".current-list").addClass("d-none");
+
             $(".other-list").removeClass("d-none");
             $(".other-list").addClass("d-block");
-
-            $(".current-list").addClass("d-none");
 
             $(".other-list h2,.current-stats-list h2").focus();
 
         } else {
 
-            $(".current-list").removeClass("d-none");
-            $(".current-list").addClass("d-block");
-
             $(".other-list").removeClass("d-block");
             $(".other-list").addClass("d-none");
+
+            $(".current-list").removeClass("d-none");
+            $(".current-list").addClass("d-block");
 
             $(".current-list h2,.current-stats-list h2").focus();
         }
