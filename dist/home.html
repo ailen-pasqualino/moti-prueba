@@ -299,17 +299,9 @@
             <section id="challenges" class="current-list" aria-labelledby="section-no-challenge-title">
                 <h2 id="section-no-challenge-title" tabindex="0">No tenés metas este día</h2>
 
-                <ul class="card-listado" role="presentation">
-                    <li>
-                        <a href="./new-challenge/01-name.html" class="challenge d-flex justify-content-between">
-                            <h3><span class="challenge-icon" aria-hidden="true">&#9997;</span> Nueva meta</h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <polyline points="9 6 15 12 9 18" />
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                <div class="no-data justify-content-center">
+                    <img src="./img/no-data.png" alt="">
+                </div>
             </section>
 
             <section id="challenges" class="other-list d-none" aria-labelledby="section-challenge-title">
@@ -317,7 +309,7 @@
 
                 <ul class="card-listado" role="presentation">
                     <li>
-                        <a href="./challenge/info.html" class="challenge" aria-labelledby="challenge-title">
+                        <a href="./challenge/info.html" class="challenge" aria-labelledby="challenge-title" aria-describedby="challenge-end-1">
                             <div class="challenge-title d-flex justify-content-between" aria-hidden="true">
                                 <h3 id="challenge-title" aria-hidden="true"><span class="challenge-icon" aria-hidden="true">&#129496;</span> Yoga semanal</h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -325,7 +317,7 @@
                                 <polyline points="9 6 15 12 9 18" />
                                 </svg>
                             </div> <!-- /challenge-title -->
-                            <p class="challenge-end">Finaliza en un mes.</p>
+                            <p id="challenge-end-1" class="challenge-end" aria-hidden="true">Finaliza en un mes.</p>
                         </a>
                     </li>
                 </ul>
@@ -399,15 +391,15 @@
         <div class="offcanvas-body">
             <ul class="challenge-list">
                 <li>
-                    <a href="./challenge/info.html" class="challenge">
+                    <a href="./challenge/info.html" class="challenge" aria-labelledby="challenge-title-2" aria-describedby="challenge-end-1">
                         <div class="challenge-title d-flex justify-content-between">
-                            <h3><span class="challenge-icon" aria-hidden="true">&#129496;</span> Yoga semanal</h3>
+                            <h3 id="challenge-title-2"><span class="challenge-icon" aria-hidden="true">&#129496;</span> Yoga semanal</h3>
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <polyline points="9 6 15 12 9 18" />
                             </svg>
                         </div> <!-- /challenge-title -->
-                        <p class="challenge-end">Finaliza en un mes.</p>
+                        <p id="challenge-end-2" class="challenge-end" aria-hidden="true">Finaliza en un mes.</p>
                     </a>
                 </li>
             </ul>
