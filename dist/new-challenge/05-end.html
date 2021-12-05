@@ -39,8 +39,8 @@
                     <form method="GET" action="./06-optional.html">
                         <fieldset>
                             <legend class="required">El campo es obligatorio</legend>
-                            <label for="challengeEnd" class="form-label">Mi meta terminará el</label>
-                            <input type="date" inputmode="numeric" class="form-control" id="challengeEnd" required>
+                            <label id="challengeEnd" class="form-label">Mi meta terminará el</label>
+                            <input type="date" inputmode="numeric" class="form-control" aria-labelledby="challengeEnd" required>
                         </fieldset> <!-- /content -->
 
                         <div class="tip-container d-flex">
@@ -50,8 +50,8 @@
 
                         <fieldset class="add-calendar">
                             <div class="form-switch align-items-center justify-content-between d-flex">
-                                <label class="form-check-label" for="addCalendar">Agregar a mi calendario <span class="badge optional">Opcional</span></label>
-                                <input class="form-check-input" type="checkbox" role="switch" id="addCalendar">
+                                <label class="form-check-label" id="addCalendar">Agregar a mi calendario <span class="badge optional">Opcional</span></label>
+                                <input class="form-check-input" type="checkbox" role="switch" aria-labelledby="addCalendar">
                             </div>
                         </fieldset>
   
@@ -67,5 +67,7 @@
     
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html> 

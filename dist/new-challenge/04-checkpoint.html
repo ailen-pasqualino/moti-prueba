@@ -41,36 +41,36 @@
                             <ul role="presentation" class="tag-row justify-content-between container">
                                 <div class="row">
                                     <li class="col">
-                                        <input type="radio" name="checkpoint" class="btn-check" id="morning" autocomplete="off" value="Mañana" required>
+                                        <input type="radio" aria-labelledby="checkpoint-title-1" aria-describedby="checkpoint-time-1" name="checkpoint" class="btn-check" id="morning" autocomplete="off" value="Mañana" required>
                                         <label class="btn btn-outline-primary tag" for="morning">
                                             <img src="../img/checkpoint/morning.png" alt="">
-                                            <p>Mañana</p>
-                                            <p class="chekpoint-time">10:00 hs</p>
+                                            <p id="checkpoint-title-1" aria-hidden="true">Mañana</p>
+                                            <p id="checkpoint-time-1" class="chekpoint-time" aria-hidden="true">10:00 hs</p>
                                         </label>
                                     </li>
                                     <li class="col">
-                                        <input type="radio" name="checkpoint" class="btn-check" id="evening" autocomplete="off" value="Tarde">
+                                        <input type="radio" aria-labelledby="checkpoint-title-2" aria-describedby="checkpoint-time-2" name="checkpoint" class="btn-check" id="evening" autocomplete="off" value="Tarde">
                                         <label class="btn btn-outline-primary tag" for="evening">
                                             <img src="../img/checkpoint/evening.png" alt="">
-                                            <p>Tarde</p>
-                                            <p class="chekpoint-time">18:00 hs</p>
+                                            <p id="checkpoint-title-2" aria-hidden="true">Tarde</p>
+                                            <p id="checkpoint-time-2" class="chekpoint-time" aria-hidden="true">18:00 hs</p>
                                         </label>
                                     </li>
                                 </div>
                                 <div class="row">
                                     <li class="col">
-                                        <input type="radio" name="checkpoint" class="btn-check" id="night" autocomplete="off" value="Noche">
+                                        <input type="radio" aria-labelledby="checkpoint-title-3" aria-describedby="checkpoint-time-3" name="checkpoint" class="btn-check" id="night" autocomplete="off" value="Noche">
                                         <label class="btn btn-outline-primary tag" for="night">
                                             <img src="../img/checkpoint/night.png" alt="">
-                                            <p>Noche</p>
-                                            <p class="chekpoint-time">22:00 hs</p>
+                                            <p id="checkpoint-title-3" aria-hidden="true">Noche</p>
+                                            <p id="checkpoint-time-3" class="chekpoint-time" aria-hidden="true">22:00 hs</p>
                                         </label>
                                     </li>
                                     <li class="col">
-                                        <input type="radio" name="checkpoint" class="btn-check" id="other" autocomplete="off" value="Otro momento del día">
+                                        <input type="radio" aria-labelledby="checkpoint-title-4" name="checkpoint" class="btn-check" id="other" autocomplete="off" value="Otro momento del día">
                                         <label class="btn btn-outline-primary tag" for="other">
                                             <img src="../img/checkpoint/other.png" alt="">
-                                            <p>Otro momento del día</p>
+                                            <p id="checkpoint-title-4" aria-hidden="true">Otro momento del día</p>
                                         </label>
                                     </li>
                                 </div>
@@ -78,8 +78,8 @@
                         </fieldset> <!-- /content -->
 
                         <fieldset id="chekpoint-time" class="d-none">
-                            <label for="checkpointInput" class="form-label">Elegir horario</label>
-                            <input type="time" inputmode="numeric" class="form-control" id="checkpointInput">
+                            <label id="checkpointInput" class="form-label">Elegir horario</label>
+                            <input type="time" inputmode="numeric" class="form-control" aria-labelledby="checkpointInput">
                         </fieldset>
   
                         <div class="step-button-container">
