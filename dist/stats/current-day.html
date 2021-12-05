@@ -43,54 +43,52 @@
             </section> <!-- calendar -->
 
             <nav id="calendar-week" class="calendar-nav" aria-label="Semana del 28">
-                <ul class="days" role="presentation">
-                    <div class="row d-flex">
-                        <li class="col">
-                            <button type="button" aria-current="page" class="active calendar-week-day" aria-label="Hoy: Domingo 28">
-                                <span aria-hidden="true" class="day-name">D</span>
-                                28
-                            </button>
-                        </li>
-                        <li class="col">
-                            <button type="button" class="calendar-week-day" aria-label="Lunes 29">
-                                <span class="day-name" aria-hidden="true">L</span>
-                                29
-                            </button>
-                        </li>
-                        <li class="col">
-                            <button type="button" class="calendar-week-day" aria-label="Martes 30" aria-describedby="w-meta-30">
-                                <span class="day-name" aria-hidden="true">M</span>
-                                30
-                                <span id="w-meta-30" class="challenge-number" aria-label="Tenés 1 meta">1</span>
-                            </button>
-                        </li>
-                        <li class="col">
-                            <button type="button" class="calendar-week-day" aria-label="Miércoles 1">
-                                <span class="day-name" aria-hidden="true">M</span>
-                                1
-                            </button>
-                        </li>
-                        <li class="col">
-                            <button type="button" class="calendar-week-day" aria-label="Jueves 2" aria-describedby="w-meta-2">
-                                <span class="day-name" aria-hidden="true">J</span>
-                                2
-                                <span id="w-meta-2" class="challenge-number" aria-label="Tenés 1 meta">1</span>
-                            </button>
-                        </li>
-                        <li class="col">
-                            <button type="button" class="calendar-week-day" aria-label="Viernes 3">
-                                <span class="day-name" aria-hidden="true">V</span>
-                                3
-                            </button>
-                        </li>
-                        <li class="col">
-                            <button type="button" class="calendar-week-day" aria-label="Sábado 4" aria-describedby="w-meta-4">
-                                <span class="day-name" aria-hidden="true">S</span>
-                                4
-                                <span id="w-meta-4" class="challenge-number" aria-label="Tenés 1 meta">1</span>
-                            </button>
-                        </li>
-                    </div> <!-- /row -->
+                <ul class="days row d-flex" role="presentation">
+                    <li class="col">
+                        <button type="button" aria-current="page" class="active calendar-week-day" aria-label="Hoy: Domingo 28">
+                            <span aria-hidden="true" class="day-name">D</span>
+                            28
+                        </button>
+                    </li>
+                    <li class="col">
+                        <button type="button" class="calendar-week-day" aria-label="Lunes 29">
+                            <span class="day-name" aria-hidden="true">L</span>
+                            29
+                        </button>
+                    </li>
+                    <li class="col">
+                        <button type="button" class="calendar-week-day" aria-label="Martes 30" aria-describedby="w-meta-30">
+                            <span class="day-name" aria-hidden="true">M</span>
+                            30
+                            <span id="w-meta-30" class="challenge-number" aria-label="Tenés 1 meta">1</span>
+                        </button>
+                    </li>
+                    <li class="col">
+                        <button type="button" class="calendar-week-day" aria-label="Miércoles 1">
+                            <span class="day-name" aria-hidden="true">M</span>
+                            1
+                        </button>
+                    </li>
+                    <li class="col">
+                        <button type="button" class="calendar-week-day" aria-label="Jueves 2" aria-describedby="w-meta-2">
+                            <span class="day-name" aria-hidden="true">J</span>
+                            2
+                            <span id="w-meta-2" class="challenge-number" aria-label="Tenés 1 meta">1</span>
+                        </button>
+                    </li>
+                    <li class="col">
+                        <button type="button" class="calendar-week-day" aria-label="Viernes 3">
+                            <span class="day-name" aria-hidden="true">V</span>
+                            3
+                        </button>
+                    </li>
+                    <li class="col">
+                        <button type="button" class="calendar-week-day" aria-label="Sábado 4" aria-describedby="w-meta-4">
+                            <span class="day-name" aria-hidden="true">S</span>
+                            4
+                            <span id="w-meta-4" class="challenge-number" aria-label="Tenés 1 meta">1</span>
+                        </button>
+                    </li>
                 </ul> <!-- /calendar-week -->
             </nav>
 
@@ -308,8 +306,8 @@
                     <p class="align-self-center">Me gusta el minimalismo pero.. ¿Y si agregamos metas?</p>
                 </div> <!-- /motivation-tip -->
     
-                <section id="emotions" class="stats-section" aria-labelledby="emotions-heading">
-                    <h2 id="emotions-heading">Tus emociones</h2>
+                <section id="emotions" class="stats-section" aria-labelledby="emotions-heading-2">
+                    <h2 id="emotions-heading-2">Tus emociones</h2>
                     <div class="no-data justify-content-center">
                         <img src="../img/no-data-3.png" alt="">
                         <p>Todavía no tenés emociones registradas</p>
@@ -327,9 +325,9 @@
                                 <p>30%</p>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div aria-labelledby="progress-description" class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <p class="description">Completaste 3 de tus 10 días comprometidos.</p>
+                            <p id="progress-description" class="description" aria-hidden="true">Completaste 3 de tus 10 días comprometidos.</p>
                         </li>
                     </ul>                
                 </section><!-- /challenges -->
@@ -339,8 +337,8 @@
                     <p class="align-self-center">¡Que gran avance, no bajes los brazos!</p>
                 </div> <!-- /motivation-tip -->
 
-                <section id="emotions" class="stats-section" aria-labelledby="emotions-heading">
-                    <h2 id="emotions-heading">Tus emociones</h2>
+                <section id="emotions" class="stats-section" aria-labelledby="emotions-heading-1">
+                    <h2 id="emotions-heading-1">Tus emociones</h2>
                     <p class="required">Registraste 1 emoción.</p>
                     <ul role="presentation">
                         <li>
