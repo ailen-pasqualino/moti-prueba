@@ -253,7 +253,7 @@
                     </div> <!-- /row -->
                     <div class="row d-flex">
                         <li class="col">
-                            <button class="calendar-week-day" aria-current="page" class="active" aria-label="Hoy: Domingo 28">
+                            <button class="calendar-week-day active" aria-current="page" aria-label="Hoy: Domingo 28">
                                 28
                             </button>
                         </li>
@@ -309,7 +309,7 @@
                 </div> <!-- /motivation-tip -->
     
                 <section id="emotions" class="stats-section" aria-labelledby="emotions-heading">
-                    <h2 id="emotions-heading">Tu emoción del día</h2>
+                    <h2 id="emotions-heading">Tus emociones</h2>
                     <div class="no-data justify-content-center">
                         <img src="../img/no-data-3.png" alt="">
                         <p>Todavía no tenés emociones registradas</p>
@@ -335,21 +335,27 @@
                 </section><!-- /challenges -->
 
                 <div class="tip-container motivation d-flex">
-                    <img src="../img/motivation-icon.png" alt="">
+                    <img src="../img/motivation-icon-3.png" alt="">
                     <p class="align-self-center">¡Que gran avance, no bajes los brazos!</p>
                 </div> <!-- /motivation-tip -->
 
                 <section id="emotions" class="stats-section" aria-labelledby="emotions-heading">
-                    <h2 id="emotions-heading">Tu emoción del día</h2>
+                    <h2 id="emotions-heading">Tus emociones</h2>
+                    <p class="required">Registraste 1 emoción.</p>
                     <ul role="presentation">
                         <li>
                             <img src="../img/emotion/motivacion.png" alt="">
-                            <h3>Motivación</h3>
+                            <p>Motivación</p>
                         </li>
                     </ul>                
                 </section><!-- /emotions -->
 
-                <section id="tags" class="stats-section" aria-labelledby="tags-heading">
+                <div class="tip-container motivation d-flex">
+                    <img src="../img/motivation-icon-2.png" alt="">
+                    <p class="align-self-center">¡Wow! Con esa actitud no hay nada que te dentenga de cumplir tus metas.</p>
+                </div> <!-- /motivation-tip -->
+
+                <section id="tags" class="stats-section d-none" aria-labelledby="tags-heading">
                     <h2 id="tags-heading">Tus categorías favoritas</h2>
                     <ul role="presentation" class="d-flex">
                         <li class="align-top">
@@ -367,51 +373,6 @@
 
         </main> <!-- /main -->
     </div> <!-- /container -->
-
-    <!-- MODAL - "Todavía no tenés metas" -->
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="modal-no-challenge" aria-labelledby="offcanvasBottomLabel">
-        <div class="offcanvas-header">
-            <h2 class="offcanvas-title" id="offcanvasBottomLabel">Todavía no tenés metas</h2>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul role="presentation" class="challenge-list">
-                <li>
-                    <a href="./new-challenge/01-name.html" class="challenge d-flex justify-content-between">
-                        <h3><span class="challenge-icon" aria-hidden="true">&#9997;</span> Nueva meta</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <polyline points="9 6 15 12 9 18" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div> <!-- /"Todavía no tenés metas" -->
-
-    <!-- MODAL - "1 meta en progreso" -->
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="modal-challenge" aria-labelledby="offcanvasBottomLabel">
-        <div class="offcanvas-header">
-            <h2 class="offcanvas-title" id="offcanvasBottomLabel">1 meta en progreso</h2>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul role="presentation" class="challenge-list">
-                <li>
-                    <a href="./challenge/info.html" class="challenge">
-                        <div class="challenge-title d-flex justify-content-between">
-                            <h3><span class="challenge-icon" aria-hidden="true">&#129496;</span> Yoga semanal</h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <polyline points="9 6 15 12 9 18" />
-                            </svg>
-                        </div> <!-- /challenge-title -->
-                        <p class="challenge-end">Finaliza en un mes.</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div> <!-- /"1 meta en progreso" -->
 
 
     <!-- Scripts -->
