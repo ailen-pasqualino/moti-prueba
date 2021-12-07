@@ -52,6 +52,9 @@ calendarWeek.click(function(){
 
 //Selección días en calendario semanal
 $(".calendar-week-day").click(function(){
+    $(".calendar-week-day").removeAttr("aria-current","page");
+    $(".calendar-week-day").removeClass("actual-page");
+
     $(this).each(function(){
         var daySpan = $(this).children();
 
@@ -74,6 +77,9 @@ $(".calendar-week-day").click(function(){
 
             $(".current-list h2,.current-stats-list h2").focus();
         }
+
+        $(this).addClass("actual-page");
+        $(this).attr("aria-current","page");
     });
 });
 
