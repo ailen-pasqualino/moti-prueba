@@ -236,6 +236,15 @@ btn:focus, .btn-outline-primary:focus, .btn-outline-primary:hover {
   background-color: #5551FF;
 }
 
+.step-button:hover, .step-button:focus {
+  background-color: #2E2AC2;
+}
+
+a.step-button:hover, a.step-button:focus {
+  color: white;
+  background-color: #2E2AC2;
+}
+
 .step-name {
   font-size: 0.88rem;
   color: var(--bs-gray-700);
@@ -389,6 +398,18 @@ section.optional li p {
           filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.075));
 }
 
+.main-menu a:hover:not(:nth-child(2)), .main-menu a:focus:not(:nth-child(2)) {
+  background-color: #EEEEFF !important;
+}
+
+.main-menu a:hover:not(:nth-child(2)) svg, .main-menu a:focus:not(:nth-child(2)) svg {
+  stroke: #5551FF;
+}
+
+.main-menu a:nth-child(2):hover, .main-menu a:nth-child(2):focus {
+  background-color: #2E2AC2;
+}
+
 .main-menu a.btn-primary {
   top: 0;
   left: 40%;
@@ -491,7 +512,7 @@ section.optional li p {
 }
 
 .calendar-nav ul button:focus, .calendar-nav ul button:hover {
-  background-color: var(--bs-gray-100);
+  background-color: #EEEEFF;
   color: #5551FF;
 }
 
@@ -500,7 +521,22 @@ section.optional li p {
 }
 
 .calendar-nav ul button.active {
-  background-color: #EEEEFF !important;
+  color: #5551FF;
+  font-weight: 500;
+}
+
+.calendar-nav ul button.active::after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.25rem;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 0.25rem;
+  background-color: #5551FF;
+}
+
+.calendar-nav ul button.actual-page {
+  background-color: #EEEEFF;
 }
 
 .calendar-nav ul button .challenge-number {
@@ -555,6 +591,11 @@ section.optional li p {
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
   color: var(--bs-gray-900);
   text-decoration: none;
+}
+
+.challenge:hover, .challenge:focus {
+  background-color: #EEEEFF;
+  color: #5551FF;
 }
 
 .challenge .challenge-icon {
@@ -769,6 +810,11 @@ section.optional li p {
   margin-bottom: 1.5rem;
 }
 
+#challenge #offcanvasBottom a:hover, #challenge #offcanvasBottom a:focus {
+  background-color: #EEEEFF;
+  border-radius: 0.5rem;
+}
+
 .offcanvas-bottom {
   height: auto;
   border-top-left-radius: 1rem;
@@ -923,6 +969,10 @@ body.onboarding header, body.quote header {
 
 body.onboarding header a, body.quote header a {
   margin-right: 5rem;
+}
+
+body.onboarding header a:hover, body.onboarding header a:focus, body.quote header a:hover, body.quote header a:focus {
+  background-color: #2E2AC2;
 }
 
 body.onboarding header .logo, body.quote header .logo {
